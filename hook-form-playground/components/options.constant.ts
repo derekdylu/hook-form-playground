@@ -1,0 +1,28 @@
+import { Option } from "@/components/ui/selector"
+
+export const OPTIONS: Option[] = [
+  { label: '行動支付', value: '行動支付' },
+  { label: '加密貨幣', value: '加密貨幣' },
+  { label: '信用卡', value: '信用卡' },
+  { label: '台積電 (2330)', value: '台積電 (2330)' },
+  { label: '中美晶 (5483)', value: '中美晶 (5483)' },
+  { label: '電子錢包', value: '電子錢包' },
+  { label: '聯發科 (2454)', value: '聯發科 (2454)' },
+  { label: '光寶科 (2301)', value: '光寶科 (2301)' },
+  { label: '金融科技', value: '金融科技' },
+  { label: '華碩 (2357)', value: '華碩 (2357)' },
+  { label: '群創 (3481)', value: '群創 (3481)' },
+  { label: '穩懋 (3105)', value: '穩懋 (3105)' },
+  { label: '數位銀行', value: '數位銀行' },
+  { label: '投資', value: '投資' },
+  { label: '貸款', value: '貸款' },
+  { label: '聯電 (2303)', value: '聯電 (2303)' },
+  { label: '鴻海 (2317)', value: '鴻海 (2317)' },
+  { label: 'NFC', value: 'NFC' },
+  { label: '力成 (6239)', value: '力成 (6239)' },
+  { label: '美律 (2439)', value: '美律 (2439)' },
+  { label: '區塊鏈', value: '區塊鏈' },
+  { label: '宏碁 (2353)', value: '宏碁 (2353)' },
+  { label: '可成 (2474)', value: '可成 (2474)' },
+  { label: '晶豪科 (3034)', value: '晶豪科 (3034)' },
+];
