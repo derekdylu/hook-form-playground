@@ -24,11 +24,13 @@ const Form = () => {
   })
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
-    if (hasVote && !canVote) {
+    const checkVote = watchVotes.filter(op => op?.length > 0).length >= 2
+    setCanVote(checkVote);
+    if (hasVote && !checkVote) {
       alert("請至少填寫兩個投票選項")
       return
     }
-    console.log(data)
+    console.log("SUBMIT!", data)
   }
 
   const clear = () => {
@@ -46,11 +48,10 @@ const Form = () => {
 
   const watchVotes = methods.watch(['vote1', 'vote2', 'vote3', 'vote4'])
   const [hasVote, setHasVote] = useState(false)
-  const [canVote, setCanVote] = useState(false)
+  const [canVote, setCanVote] = useState(true)
 
   useEffect(() => {
     setHasVote(watchVotes.some(op => op?.length > 0));
-    setCanVote(watchVotes.filter(op => op?.length > 0).length >= 2);
   }, [watchVotes]);
 
   const clearVoteOptions = () => {
